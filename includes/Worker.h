@@ -2,10 +2,16 @@
 // Created by Adam Simkin on 09/05/2023.
 //
 
-#ifndef OOPASSIGNMENT2_WORKER_H
-#define OOPASSIGNMENT2_WORKER_H
-#include "includes/Person.h"
+#ifndef PERSON_H
+#define PERSON_H
+#include "Person.h"
+#include <string>
+
+class Worker: public Person {
+public:
+    explicit Worker(Person name): Person(name) {};
+    virtual void acceptOrder(Person*, std::vector<std::string>) = 0;
+};
 
 
-
-#endif //OOPASSIGNMENT2_WORKER_H
+#endif //PERSON_H

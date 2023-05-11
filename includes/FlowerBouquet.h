@@ -1,8 +1,17 @@
-//
-// Created by Adam Simkin on 09/05/2023.
-//
+#ifndef FLOWERBOUQUET_H
+#define FLOWERBOUQUET_H
+#include <utility>
+#include <vector>
 
-#ifndef OOPASSIGNMENT2_FLOWERBOUQUET_H
-#define OOPASSIGNMENT2_FLOWERBOUQUET_H
+class FlowersBouquet {
+private:
+    std::vector<std::string> flowers;
+    bool isArranged = false;
+public:
+    explicit FlowersBouquet(std::vector<std::string> flowers) : flowers(std::move(flowers)) {};
+    void arrange();
+    std::string getFlowers();
+};
 
-#endif //OOPASSIGNMENT2_FLOWERBOUQUET_H
+
+#endif //FLOWERBOUQUET_H

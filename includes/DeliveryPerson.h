@@ -2,7 +2,15 @@
 // Created by Adam Simkin on 09/05/2023.
 //
 
-#ifndef OOPASSIGNMENT2_DELIVERYPERSON_H
-#define OOPASSIGNMENT2_DELIVERYPERSON_H
+#ifndef DELIVERYPERSON_H
+#define DELIVERYPERSON_H
+#include "Person.h"
+class FlowerBouquet; class Person;
 
-#endif //OOPASSIGNMENT2_DELIVERYPERSON_H
+class DeliveryPerson: public Person {
+public:
+    explicit DeliveryPerson(const char *name) : Person(name) {};
+    void deliver(Person *, FlowerBouquet *);
+};
+
+#endif //DELIVERYPERSON_H

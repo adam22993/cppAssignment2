@@ -2,10 +2,21 @@
 // Created by Adam Simkin on 09/05/2023.
 //
 
-#ifndef OOPASSIGNMENT2_WHOLESALER_H
-#define OOPASSIGNMENT2_WHOLESALER_H
+#ifndef WHOLESALER_H
+#define WHOLESALER_H
+#include "includes/Person.h"
+#include "includes/Grower.h"
+#include "Worker.h"
 
-Grower* grower;
-FlowerBouquet* acceptOrder(Florist*, vector<string>);
+class Wholesaler: public Person{
+private:
+    std::string name;
+public:
+    explicit Wholesaler(const char *name) : Person(name) {};
+    Grower* grower{};
+    FlowerBouquet* acceptOrder(std::vector<std::string>);
+};
 
-#endif //OOPASSIGNMENT2_WHOLESALER_H
+
+
+#endif //WHOLESALER_H

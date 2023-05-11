@@ -1,14 +1,25 @@
 //
 // Created by Adam Simkin on 09/05/2023.
 //
-#pragma once
-#ifndef OOPASSIGNMENT2_FLORIST_H
-#define OOPASSIGNMENT2_FLORIST_H
-using namespace std;
+#ifndef FLORIST_H
+#define FLORIST_H
+#include "Wholesaler.h"
+#include "Person.h"
+#include "FlowerArranger.h"
+#include "DeliveryPerson.h"
+#include <string>
 
-Wholesaler* wholesaler;
-FlowerArranger* flowerArranger;
-DeliveryPersn* deliveryPerson;
-void acceptOrder(Person*, vector<string>);
 
-#endif //OOPASSIGNMENT2_FLORIST_H
+class Florist: public Person {
+private:
+    std::string name;
+public:
+    explicit Florist(const char *name) : Person(name) {};
+    Wholesaler* wholesaler{};
+    FlowerArranger* flowerArranger{};
+    DeliveryPerson* deliveryPerson{};
+    void acceptOrder(Person*, const std::vector<std::string>&);
+    std::string* getName();
+};
+
+#endif //FLORIST_H
