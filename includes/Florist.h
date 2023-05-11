@@ -1,7 +1,7 @@
 //
 // Created by Adam Simkin on 09/05/2023.
 //
-
+#pragma once
 #ifndef OOPASSIGNMENT2_FLORIST_H
 #define OOPASSIGNMENT2_FLORIST_H
 using namespace std;
