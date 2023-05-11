@@ -1,0 +1,8 @@
+//
+// Created by Adam Simkin on 09/05/2023.
+//
+
+#ifndef OOPASSIGNMENT2_GARDENER_H
+#define OOPASSIGNMENT2_GARDENER_H
+
+#endif //OOPASSIGNMENT2_GARDENER_H
