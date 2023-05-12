@@ -6,7 +6,6 @@
 #include "includes/Wholesaler.h"
 #include "includes/FlowersBouquet.h"
 #include "includes/Gardener.h"
-#include <iostream>
 
 int main() {
     Person* person = new Person("Chris");
