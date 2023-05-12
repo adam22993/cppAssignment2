@@ -1,6 +1,3 @@
-//
-// Created by Adam Simkin on 09/05/2023.
-//
 #ifndef FLORIST_H
 #define FLORIST_H
 #include "Person.h"
@@ -11,7 +8,7 @@
 
 
 class Florist: public Person {
-protected:
+private:
     std::string name;
 public:
     explicit Florist(std::string name);
