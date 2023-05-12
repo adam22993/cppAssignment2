@@ -4,17 +4,17 @@
 
 #ifndef WHOLESALER_H
 #define WHOLESALER_H
-#include "includes/Person.h"
-#include "includes/Grower.h"
-#include "Worker.h"
+#include "Person.h"
+#include "Grower.h"
 
 class Wholesaler: public Person{
 private:
     std::string name;
 public:
-    explicit Wholesaler(const char *name) : Person(name) {};
+    explicit Wholesaler(std::string name);
     Grower* grower{};
-    FlowerBouquet* acceptOrder(std::vector<std::string>);
+    FlowersBouquet* acceptOrder(std::vector<std::string>);
+    std::string getName() override;
 };
 
 

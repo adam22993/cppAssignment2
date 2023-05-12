@@ -5,12 +5,13 @@
 
 class FlowersBouquet {
 private:
-    std::vector<std::string> flowers;
-    bool isArranged = false;
+    bool Arranged;
 public:
-    explicit FlowersBouquet(std::vector<std::string> flowers) : flowers(std::move(flowers)) {};
+    std::vector<std::string> flowersSet;
+    explicit FlowersBouquet(std::vector<std::string> flowers);
     void arrange();
     std::string getFlowers();
+    bool isArranged();
 };
 
 

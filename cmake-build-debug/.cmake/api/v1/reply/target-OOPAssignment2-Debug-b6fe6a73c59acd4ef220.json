@@ -54,13 +54,13 @@
 			[
 				0,
 				1,
+				10,
 				11,
 				12,
 				13,
 				14,
 				15,
-				16,
-				17
+				16
 			]
 		}
 	],
@@ -95,13 +95,13 @@
 			[
 				0,
 				1,
+				10,
 				11,
 				12,
 				13,
 				14,
 				15,
-				16,
-				17
+				16
 			]
 		},
 		{
@@ -115,8 +115,7 @@
 				6,
 				7,
 				8,
-				9,
-				10
+				9
 			]
 		}
 	],
@@ -171,12 +170,7 @@
 		},
 		{
 			"backtrace" : 1,
-			"path" : "includes/FlowerBouquet.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : "includes/Worker.h",
+			"path" : "includes/FlowersBouquet.h",
 			"sourceGroupIndex" : 1
 		},
 		{

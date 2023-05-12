@@ -6,10 +6,15 @@
 #define OOPASSIGNMENT2_GROWER_H
 #include <iostream>
 #include "Person.h"
-class FlowerBouquet; class Person;
+#include "Gardener.h"
+
+
 class Grower: public Person {
+private:
+    std::string name;
 public:
-    explicit Grower(const char *name) : Person(name) {};
-    FlowerBouquet* prepareFlowers(std::vector<std::string> flowers);
+    explicit Grower(std::string name);
+    Gardener* gardener{};
+    FlowersBouquet* prepareFlowers(std::vector<std::string> flowers);
 };
 #endif //OOPASSIGNMENT2_GROWER_H

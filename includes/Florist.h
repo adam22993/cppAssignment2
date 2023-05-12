@@ -3,23 +3,23 @@
 //
 #ifndef FLORIST_H
 #define FLORIST_H
-#include "Wholesaler.h"
 #include "Person.h"
+#include "Wholesaler.h"
 #include "FlowerArranger.h"
 #include "DeliveryPerson.h"
 #include <string>
 
 
 class Florist: public Person {
-private:
+protected:
     std::string name;
 public:
-    explicit Florist(const char *name) : Person(name) {};
+    explicit Florist(std::string name);
     Wholesaler* wholesaler{};
     FlowerArranger* flowerArranger{};
     DeliveryPerson* deliveryPerson{};
-    void acceptOrder(Person*, const std::vector<std::string>&);
-    std::string* getName();
+    void acceptOrder(Person*, std::vector<std::string>);
+    std::string getName() override;
 };
 
 #endif //FLORIST_H

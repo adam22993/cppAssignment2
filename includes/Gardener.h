@@ -2,10 +2,9 @@
 // Created by Adam Simkin on 09/05/2023.
 //
 
-#ifndef OOPASSIGNMENT2_GARDENER_H
-#define OOPASSIGNMENT2_GARDENER_H
+#ifndef GARDENER_H
+#define GARDENER_H
 #include "Person.h"
-#include "FlowerBouquet.h"
 #include <iostream>
 #include <vector>
 #include <string>
@@ -15,8 +14,8 @@ class Gardener: public Person {
 private:
     std::string name;
 public:
-    explicit Gardener(const char *name) : Person(name) {};
-    FlowerBouquet* prepareFlowers(const std::vector<std::string>& flowers);
-
+    explicit Gardener(std::string name);
+    FlowersBouquet* prepareFlowers(std::vector<std::string> flowers);
+    std::string getName() override;
 };
-#endif //OOPASSIGNMENT2_GARDENER_H
+#endif //GARDENER_H
