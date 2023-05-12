@@ -1,15 +1,17 @@
-//
-// Created by Adam Simkin on 09/05/2023.
-//
 #include "includes/FlowerArranger.h"
 #include "includes/FlowersBouquet.h"
-#include <vector>
 #include <iostream>
 
-FlowersBouquet* FlowerArranger::arrangeFlowers(std::vector <std::string> flowers) {
-    std::cout << "FlowerArranger " << this->getName() << " arranges flowers" << std::endl;
-    FlowersBouquet* flowersBouquet = new FlowersBouquet(flowers);
-    flowersBouquet->arrange();
-    return flowersBouquet;
+void FlowerArranger::arrangeFlowers(FlowersBouquet* flowers) {
+    if (flowers->isArranged()) {
+        std::cout << "Flowers are already arranged." << std::endl;
+        return;
+    }
+    std::cout << "Flower Arranger " << this->getName() << " arranges flowers." << std::endl;
+    flowers->arrange();
+}
+
+std::string FlowerArranger::getName() {
+    return this->name;
 }
 

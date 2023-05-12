@@ -6,8 +6,8 @@
 class FlowersBouquet {
 private:
     bool Arranged;
-public:
     std::vector<std::string> flowersSet;
+public:
     explicit FlowersBouquet(std::vector<std::string> flowers);
     void arrange();
     std::string getFlowers();

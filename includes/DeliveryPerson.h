@@ -10,7 +10,7 @@ class FlowerBouquet; class Person;
 class DeliveryPerson: public Person {
 public:
     explicit DeliveryPerson(const char *name) : Person(name) {};
-    void deliver(Person *, FlowerBouquet *);
+    void deliver(Person *, FlowersBouquet *);
 };
 
 #endif //DELIVERYPERSON_H

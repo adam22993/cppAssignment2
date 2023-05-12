@@ -1,6 +1,3 @@
-//
-// Created by Adam Simkin on 09/05/2023.
-//
 #pragma once
 #include <string>
 #include <vector>
@@ -8,7 +5,7 @@ class Florist;
 class FlowersBouquet;
 
 class Person {
-protected:
+private:
     std::string name;
 public:
     explicit Person(std::string name);

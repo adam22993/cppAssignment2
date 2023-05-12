@@ -1,6 +1,3 @@
-//
-// Created by Adam Simkin on 09/05/2023.
-//
 #ifndef FLOWERSBOUQUET_H
 #define FLOWERSBOUQUET_H
 #include <string>
