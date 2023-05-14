@@ -16,11 +16,11 @@ int main() {
     Gardener* gardener = new Gardener("Garrett");
     FlowerArranger* flowerArranger = new FlowerArranger("Flora");
     DeliveryPerson* deliveryPerson = new DeliveryPerson("Dylan");
-    florist->wholesaler = wholesaler;
-    florist->flowerArranger = flowerArranger;
-    florist->deliveryPerson = deliveryPerson;
-    wholesaler->grower = grower;
-    grower->gardener = gardener;
+    florist->setWholesaler(wholesaler);
+    florist->setFlowerArranger(flowerArranger);
+    florist->setDeliveryPerson(deliveryPerson);
+    wholesaler->setGrower(grower);
+    grower->setGardener(gardener);
 
     person->orderFlowers(florist, person2, {"Roses", "Violets", "Gladiolus"});
     delete person;

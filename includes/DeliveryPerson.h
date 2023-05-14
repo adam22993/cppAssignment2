@@ -6,7 +6,7 @@
 class DeliveryPerson: public Person {
 public:
     explicit DeliveryPerson(std::string name);
-    void deliver(Person *, FlowersBouquet *);
+    void deliver(Person*, FlowersBouquet*);
     std::string getName() override;
 };
 

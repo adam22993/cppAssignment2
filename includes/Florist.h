@@ -9,13 +9,17 @@
 
 
 class Florist: public Person {
-public:
-    explicit Florist(std::string name);
+private:
     Wholesaler* wholesaler{};
     FlowerArranger* flowerArranger{};
     DeliveryPerson* deliveryPerson{};
+public:
+    explicit Florist(std::string name);
     void acceptOrder(Person*, std::vector<std::string>);
     std::string getName() override;
+    void setWholesaler(Wholesaler* pWholesaler);
+    void setFlowerArranger(FlowerArranger* pFlowerArranger);
+    void setDeliveryPerson(DeliveryPerson* pDeliveryPerson);
 };
 
 //#endif //FLORIST_H

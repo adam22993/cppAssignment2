@@ -18,3 +18,15 @@ std::string Florist::getName() {
     return Person::getName();
 }
 
+void Florist::setWholesaler(Wholesaler* pWholesaler) {
+    Florist::wholesaler = pWholesaler;
+}
+
+void Florist::setFlowerArranger(FlowerArranger* pFlowerArranger) {
+    Florist::flowerArranger = pFlowerArranger;
+}
+
+void Florist::setDeliveryPerson(DeliveryPerson* pDeliveryPerson) {
+    Florist::deliveryPerson = pDeliveryPerson;
+}
+

@@ -15,3 +15,7 @@ std::string Wholesaler::getName() {
     return Person::getName();
 }
 
+void Wholesaler::setGrower(Grower* pGrower) {
+    Wholesaler::grower = pGrower;
+}
+

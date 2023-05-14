@@ -12,7 +12,7 @@ public:
     explicit FlowersBouquet(std::vector<std::string> flowers);
     void arrange();
     std::string getFlowers();
-    bool isArranged() const;
+    bool isArranged();
 };
 
 

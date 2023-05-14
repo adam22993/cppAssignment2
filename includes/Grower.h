@@ -7,10 +7,12 @@
 
 
 class Grower: public Person {
+private:
+    Gardener* gardener{};
 public:
     explicit Grower(std::string name);
-    Gardener* gardener{};
     FlowersBouquet* prepareFlowers(std::vector<std::string> flowers);
     std::string getName() override;
+    void setGardener(Gardener* pGardener);
 };
 //#endif //OOPASSIGNMENT2_GROWER_H

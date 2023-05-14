@@ -19,7 +19,8 @@ std::string FlowersBouquet::getFlowers() {
     return flowersToPrint + ".";
 }
 
-bool FlowersBouquet::isArranged() const {
+
+bool FlowersBouquet::isArranged() {
     return Arranged;
 }
 

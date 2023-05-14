@@ -15,3 +15,7 @@ std::string Grower::getName() {
     return Person::getName();
 }
 
+void Grower::setGardener(Gardener* pGardener) {
+    Grower::gardener = pGardener;
+}
+
