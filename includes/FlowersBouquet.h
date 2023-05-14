@@ -1,5 +1,6 @@
-#ifndef FLOWERBOUQUET_H
-#define FLOWERBOUQUET_H
+#pragma once
+//#ifndef FLOWERBOUQUET_H
+//#define FLOWERBOUQUET_H
 #include <utility>
 #include <vector>
 
@@ -11,8 +12,8 @@ public:
     explicit FlowersBouquet(std::vector<std::string> flowers);
     void arrange();
     std::string getFlowers();
-    bool isArranged();
+    bool isArranged() const;
 };
 
 
-#endif //FLOWERBOUQUET_H
+//#endif //FLOWERBOUQUET_H

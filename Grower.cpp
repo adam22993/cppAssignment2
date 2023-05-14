@@ -1,12 +1,17 @@
 #include "includes/Grower.h"
+#include <utility>
 #include <vector>
 
+Grower::Grower(std::string name) : Person(std::move(name)) {}
+
 FlowersBouquet* Grower::prepareFlowers(std::vector <std::string> flowers) {
-    std::cout << "Grower " << this->name << " forwards the request to Gardener " << this->gardener->getName() << "." << std::endl;
-    FlowersBouquet *tempFlowers = this->gardener->prepareFlowers(std::move(flowers));
-    std::cout << "Gardener " << this->gardener->getName() << " returns flowers to Grower " << this->name << "." << std::endl;
+    std::cout << "Grower " << getName() << " forwards the request to Gardener " << gardener->getName() << "." << std::endl;
+    FlowersBouquet *tempFlowers = gardener->prepareFlowers(std::move(flowers));
+    std::cout << "Gardener " << gardener->getName() << " returns flowers to Grower " << getName() << "." << std::endl;
     return tempFlowers;
 }
 
-Grower::Grower(std::string name) : Person(name), name(name) {}
+std::string Grower::getName() {
+    return Person::getName();
+}
 

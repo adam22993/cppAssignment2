@@ -1,0 +1,3 @@
+/Users/adamsimkin/Documents/GitHub/CPP Projects/OOPAssignment2/cmake-build-debug-coverage/CMakeFiles/OOPAssignment2.dir
+/Users/adamsimkin/Documents/GitHub/CPP Projects/OOPAssignment2/cmake-build-debug-coverage/CMakeFiles/edit_cache.dir
+/Users/adamsimkin/Documents/GitHub/CPP Projects/OOPAssignment2/cmake-build-debug-coverage/CMakeFiles/rebuild_cache.dir

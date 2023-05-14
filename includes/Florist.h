@@ -1,5 +1,6 @@
-#ifndef FLORIST_H
-#define FLORIST_H
+#pragma once
+//#ifndef FLORIST_H
+//#define FLORIST_H
 #include "Person.h"
 #include "Wholesaler.h"
 #include "FlowerArranger.h"
@@ -8,8 +9,6 @@
 
 
 class Florist: public Person {
-private:
-    std::string name;
 public:
     explicit Florist(std::string name);
     Wholesaler* wholesaler{};
@@ -19,4 +18,4 @@ public:
     std::string getName() override;
 };
 
-#endif //FLORIST_H
+//#endif //FLORIST_H

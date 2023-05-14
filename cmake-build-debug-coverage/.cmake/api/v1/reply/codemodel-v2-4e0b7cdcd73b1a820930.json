@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "OOPAssignment2::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-OOPAssignment2-Debug-b6fe6a73c59acd4ef220.json",
+					"jsonFile" : "target-OOPAssignment2-Debug-dd854b1f237a1c0f2d6e.json",
 					"name" : "OOPAssignment2",
 					"projectIndex" : 0
 				}
@@ -49,7 +49,7 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/Users/adamsimkin/Documents/GitHub/CPP Projects/OOPAssignment2/cmake-build-debug",
+		"build" : "/Users/adamsimkin/Documents/GitHub/CPP Projects/OOPAssignment2/cmake-build-debug-coverage",
 		"source" : "/Users/adamsimkin/Documents/GitHub/CPP Projects/OOPAssignment2"
 	},
 	"version" : 

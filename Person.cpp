@@ -8,15 +8,16 @@
 Person::Person(std::string name) : name(std::move(name)) {}
 
 void Person::orderFlowers(Florist* florist, Person* recipient, std::vector<std::string> flowers) {
-    std::cout << this->getName() << " orders flowers to " <<  recipient->getName() << " from Florist " << florist->getName();
+    std::cout << getName() << " orders flowers to " <<  recipient->getName() << " from Florist " << florist->getName();
     std::cout << ": " << FlowersBouquet(flowers).getFlowers() << std::endl;
     florist->acceptOrder(recipient, flowers);
 }
 
 void Person::acceptFlowers(FlowersBouquet* flowers) {
-    std::cout << this->name << " accepts the flowers: " << flowers->getFlowers() << std::endl;
+    std::cout << name << " accepts the flowers: " << flowers->getFlowers() << std::endl;
+    delete flowers;
 }
 
 std::string Person::getName() {
-    return this->name;
+    return name;
 }

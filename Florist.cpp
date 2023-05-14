@@ -1,21 +1,20 @@
 #include <utility>
 #include "includes/Florist.h"
 
-Florist::Florist(std::string name) : Person(name), name(name) {}
+Florist::Florist(std::string name) : Person(std::move(name)) {}
 
-void Florist::acceptOrder(Person* buyer, std::vector<std::string> flowers) {
-    std::cout << "Florist " << this->getName() << " forwards request to Wholesaler " << this->wholesaler->getName() << "." << std::endl;
-    FlowersBouquet* tempFlowers = this->wholesaler->acceptOrder(std::move(flowers));
-    std::cout << "Wholesaler " << this->wholesaler->getName() << " returns flowers to Florist " << this->getName() << "." << std::endl;
-    std::cout << "Florist " << this->getName() << " requests flowers arrangement from Flower Arranger " << this->flowerArranger->getName() << "." << std::endl;
+void Florist::acceptOrder(Person* recipient, std::vector<std::string> flowers) {
+    std::cout << "Florist " << getName() << " forwards request to Wholesaler " << wholesaler->getName() << "." << std::endl;
+    FlowersBouquet* tempFlowers = wholesaler->acceptOrder(std::move(flowers));
+    std::cout << "Wholesaler " << wholesaler->getName() << " returns flowers to Florist " << getName() << "." << std::endl;
+    std::cout << "Florist " << getName() << " requests flowers arrangement from Flower Arranger " << flowerArranger->getName() << "." << std::endl;
     flowerArranger->arrangeFlowers(tempFlowers);
-    std::cout << "Flower Arranger " << flowerArranger->getName() << " returns arranged flowers to Florist " << this->getName() << "." << std::endl;
-    std::cout << "Florist " << this->getName() << " forwards flowers to Delivery Person " << this->deliveryPerson->getName() << "." << std::endl;
-    deliveryPerson->deliver(buyer, tempFlowers);
-
+    std::cout << "Flower Arranger " << flowerArranger->getName() << " returns arranged flowers to Florist " << getName() << "." << std::endl;
+    std::cout << "Florist " << getName() << " forwards flowers to Delivery Person " << deliveryPerson->getName() << "." << std::endl;
+    deliveryPerson->deliver(recipient, tempFlowers);
 }
 
 std::string Florist::getName() {
-    return this->name;
+    return Person::getName();
 }
 
